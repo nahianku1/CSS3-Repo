@@ -16,13 +16,13 @@
 
 .table{
     background-color: rgb(72, 142, 235);
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(auto-fit,minmax(300px,auto));
-    grid-gap:20px 0;
+    grid-gap:20px;
 }
 
 .card{
@@ -190,10 +190,7 @@
     transform: scale(1.1);
 }
 
-@media screen and (max-width:940px){
-    .table{
-        height:auto;
-    }
+@media screen and (max-width:619px){
     .card-standard{
         position: unset;
     }
