@@ -1,0 +1,205 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --price-basic:rgb(92, 197, 5);
+    --price-standard:#fd79a8;
+    --price-premium:#873c91;
+    --i-tick:rgb(89, 190, 6);
+    --i-untick:red;
+
+}
+
+
+.table{
+    background-color: rgb(72, 142, 235);
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(300px,auto));
+    grid-gap:20px 0;
+}
+
+.card{
+    background-color:white;
+    padding:25px;
+    width: 300px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    border:1px solid grey;
+    box-shadow: 6px 6px 5px rgba(0,0,0,0.2);
+}
+.card-standard{
+    height:500px;
+    position: relative;
+    top:-25px
+
+}
+.price{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color:white;
+    outline: 2px solid #fab1a0;
+    margin:10px auto;
+    display:grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.price-basic{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color:var(--price-basic);
+    margin:10px auto;
+    padding:0 0 0 10px;
+    box-shadow:  -3px -3px 15px rgba(0,0,0,0.2),3px 3px 15px rgba(0,0,0,0.2);
+    font-size:25px;
+    font-weight: bold;
+    line-height:90px;
+    color:white;
+
+}
+
+
+.price-standard{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color:var(--price-standard);
+    margin:10px auto;
+    padding:0 0 0 10px;
+    box-shadow:  -3px -3px 15px rgba(0,0,0,0.2),3px 3px 15px rgba(0,0,0,0.2);
+    font-size:25px;
+    font-weight: bold;
+    line-height:90px;
+    color:white;
+
+}
+.price-premium{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color:var(--price-premium);
+    margin:10px auto;
+    padding:0 0 0 10px;
+    box-shadow:  -3px -3px 15px rgba(0,0,0,0.2),3px 3px 15px rgba(0,0,0,0.2);
+    font-size:25px;
+    font-weight: bold;
+    line-height:90px;
+    color:white;
+
+}
+
+
+.price span{
+    font-size:13px;
+    position: relative;
+    color:white;    
+}
+
+.card ul hr{
+    margin:20px 0;
+    color:#e17055
+}
+
+.card ul li{
+    margin:8px 20px;
+    color: grey;
+    font-weight:bold;
+    list-style: none;
+}
+.card ul i{
+   display: inline;
+   position: absolute;
+}
+.card ul .fa-check{
+   
+   color: var(--i-tick);
+}
+.card ul .fa-xmark{
+   
+   color: var(--i-untick);
+}
+
+.card-basic button{
+    margin:30px auto;
+    padding:10px;
+    width: 115px;
+    border:none;
+    background-color:var(--price-basic);
+    border-radius: 8px;
+    color:white;
+    font-weight: bold;
+}
+.card-standard button{
+    margin:30px auto;
+    padding:10px;
+    width: 115px;
+    border:none;
+    background-color:var(--price-standard);
+    border-radius: 8px;
+    color:white;
+    font-weight: bold;
+    overflow: hidden;
+}
+.card-premium button{
+    margin:30px auto;
+    padding:10px;
+    width: 115px;
+    border:none;
+    background-color:var(--price-premium);
+    border-radius: 8px;
+    color:white;
+    font-weight: bold;
+}
+
+.card-standard::before{
+    content: "POPULAR";
+    height:20px;
+    width: 146px;
+    display: block;
+    background-color: var(--price-standard);
+    padding:5px;
+    text-align: center;
+    position:relative;
+    left:-52px;
+    color:white;
+    transform: rotate(-40deg);
+    box-shadow:3px 3px 6px rgba(0,0,0,0.5),-3px -3px 6px rgba(0,0,0,0.5)
+
+}
+
+.card button{
+    position:absolute;
+    left:30%;
+    transition: transform 0.5s;
+}
+.card button:active{
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.card button:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:940px){
+    .table{
+        height:auto;
+    }
+    .card-standard{
+        position: unset;
+    }
+}
+    
+
+
+
+
